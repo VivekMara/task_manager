@@ -20,19 +20,20 @@
       <h1 class="text-xl m-3 font-black text-red-500">Task Manager</h1>
     </div>
 
-    <div class="main flex border-2 rounded-xl max-w-screen max-h-screen">
+    <div class="main flex flex-col border-2 rounded-xl max-w-screen max-h-screen md:flex-row md:max-w-full">
       <div
-        class="add_task flex flex-col w-1/2 m-3 bg-orange-600 rounded-xl p-2 items-center"
+        class="add_task flex flex-col lg:-1/2 sm:w-full m-3 bg-orange-600 rounded-xl p-1 items-center"
       >
         <h1 class="font-bold text-xl">Add Tasks</h1>
         <div class="input">
           <label for="input_task" class="font-bold">Enter Task:</label>
-          <input type="text" id="input_task" class="m-3 text-black p-1 w-fit" />
+          <input type="text" id="input_task" class="m-3 text-black p-1" />
         </div>
         <button onclick="add_task()">Submit</button>
       </div>
+      <br>
       <div
-        class=" flex flex-col w-1/2 m-3 bg-orange-600 rounded-xl p-2 items-center"
+        class=" flex flex-col lg:-1/2 sm:w-full m-3 bg-orange-600 rounded-xl p-2 items-center"
       >
         <h1 class="font-bold text-xl">Tasks:</h1>
         <div class="task_display flex flex-col flex-start font-semibold min-w-full">
