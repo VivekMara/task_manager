@@ -16,19 +16,30 @@
     />
   </head>
   <body>
-    <nav>
-      <ul class="flex justify-between">
-        <li><h1 class="text-xl m-3 font-black text-red-500">Task Manager</h1></li>
-        <ul
-          class="flex m-2 bg-gradient-to-r gap-5"
-        >
-          <li><button class="font-bold text-xl hover:scale-105 hover:underline">Add Task</button></li>
-          <li>
-            <button class="text-red-400 text-xl font-bold hover:scale-105 hover:underline">Remove Task</button>
-          </li>
-        </ul>
-      </ul>
-    </nav>
+    <div class="heading">
+      <h1 class="text-xl m-3 font-black text-red-500">Task Manager</h1>
+    </div>
+
+    <div class="main flex border-2 rounded-xl max-w-screen max-h-screen">
+      <div
+        class="add_task flex flex-col w-1/2 m-3 bg-orange-600 rounded-xl p-2 items-center"
+      >
+        <h1 class="font-bold text-xl">Add Tasks</h1>
+        <div class="input">
+          <label for="input_task" class="font-bold">Enter Task:</label>
+          <input type="text" id="input_task" class="m-3 text-black p-1 w-fit" />
+        </div>
+        <button onclick="add_task()">Submit</button>
+      </div>
+      <div
+        class=" flex flex-col w-1/2 m-3 bg-orange-600 rounded-xl p-2 items-center"
+      >
+        <h1 class="font-bold text-xl">Tasks:</h1>
+        <div class="task_display flex flex-col flex-start font-semibold min-w-full">
+
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
