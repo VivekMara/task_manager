@@ -20,25 +20,40 @@
       <h1 class="text-xl m-3 font-black text-red-500">Task Manager</h1>
     </div>
 
-    <div class="main flex flex-col border-2 rounded-xl max-w-screen max-h-screen md:flex-row md:max-w-full">
+    <div
+      class="main flex flex-col border-2 rounded-xl max-w-screen max-h-fit md:flex-row md:max-w-full"
+    >
       <div
         class="add_task flex flex-col lg:-1/2 sm:w-full m-3 bg-orange-600 rounded-xl p-1 items-center"
       >
-        <h1 class="font-bold text-xl">Add Tasks</h1>
+        <h1 class="font-bold text-xl">Add Tasks:</h1>
         <div class="input">
           <label for="input_task" class="font-bold">Enter Task:</label>
-          <input type="text" id="input_task" class="m-3 text-black p-1" />
+          <input
+            type="text"
+            id="input_task"
+            class="m-3 text-black p-1 border-none rounded-xl"
+          />
         </div>
-        <button onclick="add_task()">Submit</button>
+        <button
+          onclick="add_task()"
+          class="text-xl font-bold border-2 p-1 rounded-xl hover:scale-105"
+        >
+          Submit
+        </button>
       </div>
-      <br>
+      <br />
       <div
-        class=" flex flex-col lg:-1/2 sm:w-full m-3 bg-orange-600 rounded-xl p-2 items-center"
+        class="flex flex-col lg:-1/2 sm:w-full m-3 bg-orange-600 rounded-xl p-2 items-center"
       >
         <h1 class="font-bold text-xl">Tasks:</h1>
-        <div class="task_display flex flex-col flex-start font-semibold min-w-full">
-
+        <div class="flex gap-2">
+          <h1 class="font-semibold">Count:</h1>
+          <h1 id="counter" class="font-semibold">0</h1>
         </div>
+        <div
+          class="task_display flex flex-col flex-start font-semibold min-w-full"
+        ></div>
       </div>
     </div>
 
